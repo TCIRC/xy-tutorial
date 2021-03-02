@@ -156,16 +156,64 @@
 <h2 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert(123)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>一個案<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><button onclick="alert(123)">一個案</button></p>
 <p><span style="color: #f00;"><strong><em>搓搓看上面的按鈕</em></strong></span><br>會執行<code>alert(123)</code><br>這是 javascript</p>
-<p>javascript 是一種程式語言，主要出現於網頁等<br>他可以做到任何使用者能做到的事</p>
+<p>javascript 是一種程式語言，主要出現於網頁等<br>他可以做到任何使用者能做到的事、傳送資料、挖礦、偷餅乾</p>
 <p>JS 也可以這樣放</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ScripT</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
     <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"It's a string."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scRipt</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>或是</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>x<span class="token punctuation">"</span></span> <span class="token attr-name">onerror</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>alert(<span class="token punctuation">"</span>XSS<span class="token punctuation">"</span>)<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>onerror</code> 的 Javascript 於發生錯誤時會執行，如讀不到圖片</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://webtuto.tcirc.tw/html/" data-id="cklkopw800000t2rn1ydfcx8n" data-title="HTML" class="article-share-link">Share</a>
+      <a data-url="https://webtuto.tcirc.tw/html/" data-id="cklrt70730001merndu4bbjfw" data-title="HTML" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-XSS" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/XSS/" class="article-date">
+  <time class="dt-published" datetime="2021-03-02T08:32:06.000Z" itemprop="datePublished">2021-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/XSS/">XSS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>XSS (Cross Site Scripting): 把自己的 Script 植入別人的網頁</p>
+<h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><p>這是一個搜尋的網頁<br><img src="/images/search-test.png"><br>我們搜尋的關鍵字出現於搜尋結果頁面上<br><img src="/images/search-res-test.png"></p>
+<p>如果放入 HTML 的話看看會發生什麼事<br><img src="/images/search-exponent.png"><br><img src="/images/search-res-exponent.png"></p>
+<p>看起來沒有把 HTML 過濾掉</p>
+<p>這種時候就是要植入 Javascript<br><img src="/images/search-xss.png"><br><img src="/images/search-res-xss.png"><br>植入成功</p>
+<p><a target="_blank" rel="noopener" href="https://xss-game.appspot.com/">https://xss-game.appspot.com/</a><br><a target="_blank" rel="noopener" href="https://alf.nu/alert1">https://alf.nu/alert1</a><br><a target="_blank" rel="noopener" href="https://prompt.ml/0">https://prompt.ml/0</a><br>可以於這些網頁練習</p>
+<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p>cookie 是存於使用者瀏覽器的資料， 可以由所訪問的網站指派<br>訪問網頁時，瀏覽器會把 cookie 送出給伺服器</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://webtuto.tcirc.tw/XSS/" data-id="cklrt706y0000mern1t4bdihm" data-title="XSS" class="article-share-link">Share</a>
       
       
       
@@ -195,7 +243,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li></ul>
     </div>
   </div>
 
@@ -206,6 +254,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/XSS/">XSS</a>
+          </li>
         
           <li>
             <a href="/html/">HTML</a>
